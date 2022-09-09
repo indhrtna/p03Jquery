@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P03 JQUERY</title>
+
+<style>
+    body{
+        background-color: #A7D2CB;
+    }
+
+
+    h1{
+        background-color: #CDF0EA;
+        text-align: center;
+        font-family: 'Segoe UI';
+        color: #293462;
+    }
+
+    p{
+        text-align: center;
+        font-family: 'Segoe UI';
+        color: #25316D;
+    }
+
+    table{
+       width: 50%;
+       border-collapse: collapse;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+
+   .table1{
+       margin-top: auto;
+       margin-left: auto;
+       display: flex;
+       margin-top: 100px;
+       position: relative;
+       align-items: center;
+       flex-direction: column;
+   }
+
+   td{
+    border-collapse: collapse;
+    text-align: left;
+    padding: 7px;
+    cursor: pointer;
+    transition: 0,2s;
+   }
+   td:hover{
+    color: #0a0825;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+   th{
+    border-collapse: collapse;
+    text-align: center;
+    padding: 7px;
+   }
+   
+
+   tr{
+    border: 1;
+   }
+  
+   tr:nth-child(even) {
+   background-color: #7FBCD2;
+   }
+</style>
+</head>
+
+<body>
+
+    <div class = table1>
+
+    <h1>Top 10 My Best Friends</h1>
+    <p>Indah Ratna Ningsih<br>41215909</p>
+    
+    <table border="5">
+        
+        <tr>
+            <th>No</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Alamat</th>
+            <th>Aksi</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>41215998</td>
+          <td class="text">Nur Anindya Putri Haryandini</td>
+          <td class="text">Sunyaragi</td>
+          <td class="text" id="hps1">Hapus</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>41215658</td>
+            <td class="text">Ike Suryani Dewi</td>
+            <td class="text">Pamengkang</td>
+            <td class="text" id="hps2">Hapus</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>41215488</td>
+            <td class="text">Hilda Novianti</td>
+            <td class="text">Griya Cempaka Arum</td>
+            <td class="text" id="hps3">Hapus</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>41215407</td>
+            <td class="text">Mifta Almaripat</td>
+            <td class="text">Banjarwangunan</td>
+            <td class="text" id="hps4">Hapus</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>41215488</td>
+            <td class="text">Muhammad Enricco Rizqy</td>
+            <td class="text">Klayan</td>
+            <td class="text" id="hps5">Hapus</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>41215546</td>
+            <td class="text">Muhammad Khoirul Huda</td>
+            <td class="text">Cideng Jaya</td>
+            <td class="text" id="hps6">Hapus</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>41215431</td>
+            <td class="text">Naufal Arif Hidayatullah</td>
+            <td class="text">Kesunean</td>
+            <td class="text" id="hps7">Hapus</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>41215521</td>
+            <td class="text">Nia Agustin</td>
+            <td class="text">Harjamukti</td>
+            <td class="text" id="hps8">Hapus</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>41215737</td>
+            <td class="text">Muhammad Rivaldi</td>
+            <td class="text">Majasem</td>
+            <td class="text" id="hps9">Hapus</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>41215524</td>
+            <td class="text">Muhammad Arif</td>
+            <td class="text">Majasem</td>
+            <td class="text" id="hps10">Hapus</td>
+        </tr>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+     $(document).ready(function(){ $('.text').click(function(){ 
+ 	  let text = $(this).text();
+      alert(`Anda mengklik text yang berisi text "${text}"`);
+      if(text!='HAPUS'){ 
+   	  let text2 = prompt('Mau diubah?:', text);
+      if(!text2) return; $(this).text(text2); }
+      else{ let yakin = confirm('Yakin?'); if(!yakin) return;  } }) }) 
+</script>
+
+        )
+</script>
+    </div>
+    </table>
+</body>
